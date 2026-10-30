@@ -1,0 +1,32 @@
+# Archivos de Ejemplo para Pruebas de Academic RAG
+
+Este directorio `data/` está destinado a almacenar documentos PDF de muestra para realizar pruebas del servicio RAG.
+
+## Contenido del PDF de Ejemplo: `ejemplo_apuntes.pdf`
+
+El archivo de prueba contiene dos páginas con apuntes académicos representativos:
+
+### Página 1: Programación Orientada a Objetos
+> "La Programación Orientada a Objetos (POO) es un paradigma de programación basado en el concepto de 'objetos', los cuales contienen datos en forma de campos (atributos) y código en forma de procedimientos (métodos).
+> Los cuatro pilares fundamentales de la POO son:
+> 1. Encapsulamiento: Ocultamiento del estado interno y protección de la integridad de los datos.
+> 2. Abstracción: Modelado de las características esenciales de un objeto omitiendo detalles complejos.
+> 3. Herencia: Mecanismo para que una clase derivada adquiera propiedades y métodos de una clase base.
+> 4. Polimorfismo: Capacidad de objetos de distintas clases de responder al mismo mensaje o método según su comportamiento particular."
+
+### Página 2: Complejidad Algorítmica y Notación Asintótica
+> "El análisis de algoritmos evalúa los recursos computacionales (tiempo de ejecución y memoria) necesarios para resolver un problema.
+> La Notación Big O (O-grande) caracteriza el comportamiento en el peor de los casos y describe la tasa de crecimiento asintótica conforme el tamaño de entrada (n) tiende a infinito.
+> Clasificación de complejidades comunes:
+> - O(1): Tiempo constante. Acceso directo por índice en arreglos.
+> - O(log n): Tiempo logarítmico. Búsqueda binaria en listas ordenadas.
+> - O(n): Tiempo lineal. Recorrido simple de una lista.
+> - O(n log n): Tiempo log-lineal. Algoritmos de ordenamiento eficientes como MergeSort y QuickSort.
+> - O(n^2): Tiempo cuadrático. Algoritmos como BubbleSort o comparación doble anidada."
+
+## Cómo generar o regenerar el PDF
+Puedes ejecutar el script auxiliar:
+```bash
+python data/generar_pdf_ejemplo.py
+```
+El archivo `ejemplo_apuntes.pdf` generado puede subirse a través del endpoint `POST /api/v1/documentos`.
